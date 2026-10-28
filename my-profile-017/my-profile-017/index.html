@@ -3,32 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-</style>
-    <title>My Profile</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main class="profile-card">
-      
-      <img src="/my-profile-017/images/68219010017.jpg" 
-      alt="รูปอ้ายก้อง" 
-      class="profile-picture"/>
-    
-      <h1>My Profile</h1>
-      <p>ชื่อ-นามสกุล: <span id="fullname">พงศทร จริยะวัฒนา</span></p>
-      <p>ชื่อเล่น: <span id="nickname">ก้อง</span></p>
-      <p>รหัสประจำตัว: <span id="studentID">68219010017</span></p>
+    <header class="site-header">
+      <a class="brand" href="#about">My Portfolio</a>
+      <nav class="site-nav" aria-label="เมนูหลัก">
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#skills">ทักษะ</a>
+        <a href="#projects">ผลงาน</a>
+      </nav>
+    </header>
 
-      <div class="motto">
-        <h2>คติประจำใจ</h2>
-        <p id="motto">นอนก่อน ค่อยว่ากัน</p>
-      </div>
+    <main class="page-content">
+      <section class="profile-card" id="about" aria-labelledby="profile-title">
+        <img
+          src="images/68219010017.jpg"
+          alt="รูปอ้ายก้อง"
+          class="profile-picture"
+        />
 
-      <button id="greetButton">ทักทาย</button>
-      <p id="greetingMessage">สวัสดีครับ</p>
+        <h1 id="profile-title">My profile</h1>
+        <p>ชื่อ-นามสกุล: <span id="fullname">พงศทร จริยะวัฒนา</span></p>
+        <p>ชื่อเล่น: <span id="nickname">ก้อง</span></p>
+        <p>รหัสประจำตัว: <span id="studentID">68219010017</span></p>
+
+        <div class="motto">
+          <h2>คติประจำใจ</h2>
+          <p id="motto">นอนก่อน ค่อยว่ากัน</p>
+        </div>
+
+        <button id="greetButton">ทักทาย</button>
+        <p id="greetingMessage">สวัสดีครับ</p>
+      </section>
+
+      <section class="content-section" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">ทักษะที่สนใจ</h2>
+        <ul>
+          <li>นอนให้หลับ</li>
+          <li>นอนครับ</li>
+          <li>นอนอย่างมีคุณภาพ</li>
+        </ul>
+      </section>
+
+      <section class="content-section" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">ผลงานของฉัน</h2>
+        <article class="project-card">
+          <h3>ไม่มีครับ</h3>
+          <p>
+            ให้ทายครับ
+          </p>
+        </article>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <p>พัฒนาโดย Copilot</p>
+      <p>ft.นายพงศทร จริยะวัฒนา</p>
+    </footer>
   </body>
- 
 </html>

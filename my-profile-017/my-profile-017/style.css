@@ -2,68 +2,180 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 30px 16px;
-    color: #333;
+    background-color: #f5f8fc;
+    color: #172033;
+    font-family: sans-serif;
 }
- .circle {
-        border-radius: 100%;
-    }
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(8%, 24px);
+    background-color: #19a806;
+    color: #fff;
+}
+
+.brand {
+    color: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.site-nav a {
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    text-decoration: underline;
+}
+
+.page-content {
+    width: min(100% - 32px, 594px);
+    margin: 20px auto 26px;
+}
+
+#about,
+#skills,
+#projects {
+    scroll-margin-top: 80px;
+}
+
 .profile-card {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: #b7ff96;
-    border-radius: 16px;
+    width: min(100%, 800px);
+    margin: 0 auto 16px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #b3ff00;
     box-shadow: 0 8px 24px rgba(15, 39, 71, 0.12);
-}
-
-h1 {
-    color: blue;
-    text-align: center;
-}
-
-.profile-card{
     line-height: 1.8;
 }
 
 .profile-picture {
     display: block;
-    margin: 0 auto 24px;
     width: 200px;
     height: 200px;
+    margin: 0 auto 16px;
+    border: 10px solid #ff0000;
     border-radius: 50%;
     object-fit: cover;
-    border: 7px solid #f8012a;
+}
+
+.profile-card h1 {
+    color: #ff0000;
+    text-align: center;
 }
 
 .motto {
-    margin-top: 24px;
-    padding: 16px;
-    background-color: #fff;
-    border-left: 5px solid #00ff00;
+    margin-top: 16px;
+    padding: 12px;
+    border-left: 4px solid #10a703;
     border-radius: 8px;
+    background-color: #fff;
+}
+
+.motto h2 {
+    font-size: 18px;
 }
 
 button {
-    margin-top: 16px;
-    padding: 12px 24px;
-    border: none;
+    margin-top: 8px;
+    padding: 10px 20px;
+    border: 0;
     border-radius: 8px;
-    background-color: #00ffaa;
-    color: #000000;
+    background-color: #ff0000;
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #00cc88;
+    background-color: #0044ff;
 }
 
-#message {
-    color: #00ff00;
-    font-weight: bold;
+#greetingMessage {
+    font-weight: 700;
+}
+
+.content-section {
+    margin-top: 16px;
+    padding: 20px;
+    border: 1px solid #ff1100;
+    border-radius: 12px;
+    background-color: #b3ff00;
+}
+
+.content-section h2 {
+    color: #000000;
+    font-size: 18px;
+}
+
+.content-section li {
+    margin-top: 8px;
+}
+
+.project-card {
+    padding: 12px;
+    border: 1px solid #0f0f0f;
+    border-radius: 8px;
+    background-color: #eff5ff;
+}
+
+.project-card h3 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.project-card p {
+    line-height: 1.8;
+}
+
+.site-footer {
+    padding: 12px 16px;
+    background-color: #19a806;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 8px 0;
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 0 16px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .site-nav {
+        gap: 12px;
+    }
+
+    .site-nav a {
+        font-size: 12px;
+    }
 }
